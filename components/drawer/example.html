@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Drawer</title>
+<link rel="stylesheet" href="../../dads-base.css"><!-- drawer は hamburger-menu-button と組み合わせる -->
+<link rel="stylesheet" href="hamburger-menu-button.css">
+<link rel="stylesheet" href="drawer.css">
+</head>
+<body>
+
+<!-- トリガーボタン -->
+<button class="dads-hamburger-menu-button" type="button" onclick="document.getElementById('drawer').showModal()">
+  <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="currentcolor"/>
+  </svg>
+  メニュー
+</button>
+
+<!-- Drawer本体: <dialog> 要素ベース -->
+<dialog id="drawer" class="dads-drawer" data-placement="right" aria-labelledby="drawer-heading">
+  <h2 id="drawer-heading" class="dads-u-visually-hidden">メニュー</h2>
+  <div class="dads-drawer__header">
+    <button class="dads-hamburger-menu-button" type="button" onclick="document.getElementById('drawer').close()">
+      <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M32 95L25 88L53 60L25 32L32 25L60 53L88 25L95 32L67 60L95 88L88 95L60 67L32 95Z" fill="currentcolor"/>
+      </svg>
+      閉じる
+    </button>
+  </div>
+  <div class="dads-drawer__body">
+    <p style="padding: 1rem;">ドロワーのコンテンツが入ります。</p>
+  </div>
+</dialog>
+
+</body>
+</html>

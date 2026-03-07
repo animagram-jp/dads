@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Step Navigation</title>
+<link rel="stylesheet" href="../../dads-base.css">
+<link rel="stylesheet" href="step-navigation.css">
+</head>
+<body>
+
+<!-- 水平 / data-reached で到達済みステップを表す -->
+<div class="dads-step-navigation" data-orientation="horizontal" data-size="normal">
+  <p class="dads-u-visually-hidden">全4ステップ中、2ステップ目まで到達済み</p>
+  <ul>
+    <li class="dads-step-navigation__step" data-reached>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">1</span>
+        <span class="dads-step-navigation__title">入力</span>
+      </span>
+    </li>
+    <li class="dads-step-navigation__step" data-current>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">2</span>
+        <span class="dads-step-navigation__title">確認</span>
+      </span>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">3</span>
+        <span class="dads-step-navigation__title">完了</span>
+      </span>
+    </li>
+  </ul>
+</div>
+
+<!-- 垂直 -->
+<div class="dads-step-navigation" data-orientation="vertical" data-size="normal" style="margin-top: 3rem">
+  <p class="dads-u-visually-hidden">全3ステップ中、1ステップ目まで到達済み</p>
+  <ul>
+    <li class="dads-step-navigation__step" data-current>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">1</span>
+        <span class="dads-step-navigation__title">申請情報の入力</span>
+      </span>
+      <p class="dads-step-navigation__description">必要事項を入力してください。</p>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">2</span>
+        <span class="dads-step-navigation__title">内容の確認</span>
+      </span>
+      <p class="dads-step-navigation__description">入力内容を確認してください。</p>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">3</span>
+        <span class="dads-step-navigation__title">申請完了</span>
+      </span>
+    </li>
+  </ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>List</title>
+<link rel="stylesheet" href="../../dads-base.css"><!-- list はリンクを内包する場合 link.css が必要 -->
+<link rel="stylesheet" href="../link/link.css">
+<link rel="stylesheet" href="list.css">
+</head>
+<body>
+
+<!-- 箇条書き -->
+<ul class="dads-list" data-spacing="4">
+  <li>項目A</li>
+  <li>項目B（少し長めのテキストサンプルです）</li>
+  <li>
+    ネストあり
+    <ul class="dads-list" data-spacing="4">
+      <li>サブ項目1</li>
+      <li><a class="dads-link" href="#">サブ項目2（リンク）</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 番号付き -->
+<ul class="dads-list" data-marker="number" data-spacing="4" style="margin-top: 2rem">
+  <li><span>1. </span><span>最初の項目</span></li>
+  <li><span>2. </span><span>二番目の項目</span></li>
+  <li><span>3. </span><span>三番目の項目</span></li>
+</ul>
+
+</body>
+</html>

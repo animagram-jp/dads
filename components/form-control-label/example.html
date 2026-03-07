@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Form Control Label</title>
+<link rel="stylesheet" href="../../dads-base.css">
+<link rel="stylesheet" href="form-control-label.css">
+<!-- form-control-label は input等のコンポーネントと組み合わせて使う。
+     以下は checkbox との組み合わせ例のため checkbox.css を追加読み込み -->
+<link rel="stylesheet" href="../checkbox/checkbox.css">
+</head>
+<body>
+
+<!-- 単一入力 (必須) -->
+<div class="dads-form-control-label" data-size="md">
+  <label class="dads-form-control-label__label" for="name-input">
+    氏名
+    <span class="dads-form-control-label__requirement" data-required="true">※必須</span>
+  </label>
+  <p class="dads-form-control-label__support-text">姓と名の間にスペースを入れてください。</p>
+</div>
+
+<!-- 複数選択 (任意) + エラー -->
+<fieldset class="dads-form-control-label" data-size="md" style="margin-top:2rem" aria-describedby="check-error check-support">
+  <legend class="dads-form-control-label__label">
+    該当する項目
+    <span class="dads-form-control-label__requirement" data-required="false">任意</span>
+  </legend>
+  <p id="check-support" class="dads-form-control-label__support-text">該当するものをすべて選択してください。</p>
+  <div>
+    <label class="dads-checkbox" data-size="md">
+      <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+      <span class="dads-checkbox__label">選択肢A</span>
+    </label>
+    <label class="dads-checkbox" data-size="md">
+      <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+      <span class="dads-checkbox__label">選択肢B</span>
+    </label>
+  </div>
+  <p id="check-error" class="dads-form-control-label__error-text">＊エラーテキストが入ります。</p>
+</fieldset>
+
+</body>
+</html>

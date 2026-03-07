@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Checkbox</title>
+<link rel="stylesheet" href="../../dads-base.css">
+<link rel="stylesheet" href="checkbox.css">
+</head>
+<body>
+
+<!-- サイズ×状態マトリクス: lg / md / sm × 通常・チェック済・エラー・無効 -->
+<div style="display: grid; grid-template-columns: repeat(6, auto); gap: 2rem; justify-content: start">
+
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+</div>
+
+</body>
+</html>
