@@ -1,0 +1,1971 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DADS Components</title>
+<link rel="stylesheet" href="dads-base.css">
+<link rel="stylesheet" href="components/accordion/accordion.css">
+<link rel="stylesheet" href="components/blockquote/blockquote.css">
+<link rel="stylesheet" href="components/breadcrumb/breadcrumb.css">
+<link rel="stylesheet" href="components/card/card-example-1.css">
+<link rel="stylesheet" href="components/card/card-example-2.css">
+<link rel="stylesheet" href="components/card/card-example-3.css">
+<link rel="stylesheet" href="components/card/card-example-4.css">
+<link rel="stylesheet" href="components/card/card-example-5.css">
+<link rel="stylesheet" href="components/card/card-example-6.css">
+<link rel="stylesheet" href="components/button/button.css">
+<link rel="stylesheet" href="components/calendar/calendar.css">
+<link rel="stylesheet" href="components/checkbox/checkbox.css">
+<link rel="stylesheet" href="components/chip-label/chip-label.css">
+<link rel="stylesheet" href="components/date-picker/date-picker.css">
+<link rel="stylesheet" href="components/description-list/description-list.css">
+<link rel="stylesheet" href="components/disclosure/disclosure.css">
+<link rel="stylesheet" href="components/divider/divider.css">
+<link rel="stylesheet" href="components/drawer/drawer.css">
+<link rel="stylesheet" href="components/emergency-banner/emergency-banner.css">
+<link rel="stylesheet" href="components/file-upload/file-upload.css">
+<link rel="stylesheet" href="components/form-control-label/form-control-label.css">
+<link rel="stylesheet" href="components/global-menu/global-menu.css">
+<link rel="stylesheet" href="components/hamburger-menu-button/hamburger-menu-button.css">
+<link rel="stylesheet" href="components/heading/heading.css">
+<link rel="stylesheet" href="components/input-text/input-text.css">
+<link rel="stylesheet" href="components/language-selector/language-selector.css">
+<link rel="stylesheet" href="components/link/link.css">
+<link rel="stylesheet" href="components/list/list.css">
+<link rel="stylesheet" href="components/menu-list/menu-list.css">
+<link rel="stylesheet" href="components/menu-list-box/menu-list-box.css">
+<link rel="stylesheet" href="components/notification-banner/notification-banner.css">
+<link rel="stylesheet" href="components/radio/radio.css">
+<link rel="stylesheet" href="components/resource-list/resource-list.css">
+<link rel="stylesheet" href="components/search-box/search-box.css">
+<link rel="stylesheet" href="components/select/select.css">
+<link rel="stylesheet" href="components/step-navigation/step-navigation.css">
+<link rel="stylesheet" href="components/table/table.css">
+<link rel="stylesheet" href="components/textarea/textarea.css">
+<link rel="stylesheet" href="components/utility-link/utility-link.css">
+<link rel="stylesheet" href="components/carousel/carousel.css">
+<script type="module" src="components/calendar/calendar.js"></script>
+<script type="module" src="components/date-picker/date-picker.js"></script>
+<script type="module" src="components/file-upload/file-upload.js"></script>
+<script type="module" src="components/language-selector/language-selector.js"></script>
+<script type="module" src="components/menu-list-box/menu-list-box.js"></script>
+<script type="module" src="components/table/scroll-shadow.js"></script>
+<script type="module" src="components/carousel/carousel.js"></script>
+<style>
+  body { padding: 2rem; }
+  .example-section { margin-block: 3rem; }
+  .example-section > h2 { font: bold 1.25rem/2 sans-serif; border-bottom: 2px solid #ccc; margin-bottom: 1.5rem; }
+  .example-carousel { margin: 0; }
+</style>
+</head>
+<body>
+
+<!-- ============================================================ -->
+<!-- accordion -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Accordion</h2>
+
+<details class="dads-accordion">
+  <summary id="accordion-1" class="dads-accordion__summary">
+    <span class="dads-accordion__icon">
+      <svg class="dads-accordion__icon-svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.3 7.3L12 16L20.7 7.3" fill="none" stroke="currentcolor" stroke-width="2"/>
+      </svg>
+    </span>
+    <h3>ダミーテキストとは何ですか？</h3>
+  </summary>
+  <div class="dads-accordion__content">
+    <div style="margin-bottom: 1lh;">これはダミーテキストです。</div>
+    <div style="margin-bottom: 1lh;">ダミーテキストは、デザインやレイアウトの作成時に使用される仮の文章です。</div>
+    <a href="#accordion-1" class="dads-accordion__back-link">
+      <svg class="dads-accordion__back-link-icon" width="24" height="24" fill="none" aria-hidden="true">
+        <path d="M6 7V14.5C6 16.8 8.2 19 10.5 19C12.8 19 15 16.8 15 14.5V6M10.709 9.7L15 5.414L19.291 9.7" stroke="currentcolor" stroke-width="2" />
+      </svg>
+      「ダミーテキストとは何ですか？」の先頭に戻る
+    </a>
+  </div>
+</details>
+
+<details class="dads-accordion">
+  <summary id="accordion-2" class="dads-accordion__summary">
+    <span class="dads-accordion__icon">
+      <svg class="dads-accordion__icon-svg" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M3.3 7.3L12 16L20.7 7.3" fill="none" stroke="currentcolor" stroke-width="2"/>
+      </svg>
+    </span>
+    <h3>二つ目の質問が入ります</h3>
+  </summary>
+  <div class="dads-accordion__content">
+    <div>回答テキストが入ります。</div>
+  </div>
+</details>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- blockquote -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Blockquote</h2>
+
+<blockquote class="dads-blockquote">
+  <p>これは引用文の例です。デジタル庁デザインシステムでは、アクセシビリティファーストの原則に基づいて、すべてのユーザーが利用しやすいサービスの提供を目指しています。</p>
+</blockquote>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- breadcrumb -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Breadcrumb</h2>
+
+<nav class="dads-breadcrumb" aria-labelledby="breadcrumb-label">
+  <span id="breadcrumb-label" class="dads-u-visually-hidden">現在位置</span>
+  <ol class="dads-breadcrumb__list">
+    <li class="dads-breadcrumb__item">
+      <a class="dads-breadcrumb__link" href="#">
+        <svg class="dads-breadcrumb__link-icon" width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M3 13L3 6L8 2L13 6V13H9V9H7V13H3Z" fill="currentcolor"/>
+        </svg>
+        ホーム
+      </a>
+      <span class="dads-breadcrumb__separator">
+        <svg class="dads-breadcrumb__separator-icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M4.5 11L4 10.5L8 6.5L4 2.5L4.5 2L9 6.5L4.5 11Z" fill="currentcolor" />
+        </svg>
+      </span>
+    </li>
+    <li class="dads-breadcrumb__item">
+      <a class="dads-breadcrumb__link" href="#">組織情報</a>
+      <span class="dads-breadcrumb__separator">
+        <svg class="dads-breadcrumb__separator-icon" width="12" height="12" viewBox="0 0 12 12" aria-hidden="true">
+          <path d="M4.5 11L4 10.5L8 6.5L4 2.5L4.5 2L9 6.5L4.5 11Z" fill="currentcolor" />
+        </svg>
+      </span>
+    </li>
+    <li class="dads-breadcrumb__item" aria-current="page">
+      現在のページタイトル
+    </li>
+  </ol>
+</nav>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- card -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Card / example-1: 縦型・画像オーバーラップ</h2>
+
+<ul class="dads-card-example-1-list">
+  <li>
+    <a class="dads-card-example-1" href="#">
+      <div class="dads-card-example-1__image">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M29.9 8C31.2 6.1 33 6.1 34 8c1.1 1.9 2.2 5 2.2 8.8v6.1l20.5 12.3c1 .8 1.9 2.1 1.9 3.5v4l-23-7.5-.9 12.1-3 2.6h.7l-.5.3-.3-.2-1.7 1.4 2-1.2 6.1 3.7Q39.7 55 40 57l-16 .2q.1-2 1.9-3.4l3.7-2.3L28.3 35l-23 7.8v-4q.1-2.2 1.9-3.5l20.5-12.3v-6.1c0-3.7 1.1-7 2.2-8.8" fill="white"/>
+        </svg>
+      </div>
+      <div class="dads-card-example-1__main">
+        <h2>機内サービス</h2>
+        <p>快適なシートや機内食で空の旅をより快適にお過ごしいただけます</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a class="dads-card-example-1" href="#">
+      <div class="dads-card-example-1__image">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M32 31.6q2 0 3.4-1.4 1.5-1.4 1.4-3.4 0-2-1.4-3.4Q34 22 32 22q-2 0-3.4 1.4-1.4 1.5-1.4 3.4 0 2 1.4 3.4 1.4 1.5 3.4 1.4m0 25.8A85 85 0 0 1 16.9 41q-5-7.5-5-13.8 0-9.1 6-15 6-5.6 14.1-5.6t14.2 5.7q6 5.7 6 15 0 6.2-5.1 13.7T32 57.4" fill="white"/>
+        </svg>
+      </div>
+      <div class="dads-card-example-1__main">
+        <h2>乗り継ぎサポート</h2>
+        <p>お乗り継ぎ時の際に日本人のガイドがご案内いたします</p>
+      </div>
+    </a>
+  </li>
+  <li>
+    <a class="dads-card-example-1" href="#">
+      <div class="dads-card-example-1__image">
+        <svg width="64" height="64" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+          <path d="M40 5.3H24v8H13.3v40h7q-.4.7-.3 1.4c0 2.1 1.9 4 4 4s4-1.9 4-4q0-.7-.3-1.4h8.6q-.4.7-.3 1.4c0 2.1 1.9 4 4 4s4-1.9 4-4q0-.7-.3-1.4h7v-40H40zM25.3 44h-2.6V24h2.6zm8 0h-2.6V24h2.6zM36 13.3h-8v-4h8zM41.3 24v20h-2.6V24z" fill="white"/>
+        </svg>
+      </div>
+      <div class="dads-card-example-1__main">
+        <h2>機内持ち込み手荷物検査</h2>
+        <p>機内にお持ち込みいただける手荷物について係員が検査いたします</p>
+      </div>
+    </a>
+  </li>
+</ul>
+
+</section>
+
+<section class="example-section">
+<h2>Card / example-2: 横型・画像右・subgrid</h2>
+
+<ul class="dads-card-example-2-list">
+  <li>
+    <div class="dads-card-example-2">
+      <div class="dads-card-example-2__main">
+        <div class="dads-card-example-2__main-header">
+          <h2 class="dads-card-example-2__heading">地域緑化事業</h2>
+          <div class="dads-card-example-2__function">
+            <button type="button">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+                <circle cx="12" cy="4.5" r="1.5"/>
+                <circle cx="12" cy="12" r="1.5"/>
+                <circle cx="12" cy="19.5" r="1.5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="dads-card-example-2__contents">住民の皆さまが参加できる地域緑化事業を行っています。地域交流を促進するとともに、地域の景観美化を目的としています。</p>
+        <div class="dads-card-example-2__divider"></div>
+        <div class="dads-card-example-2__links">
+          <a class="dads-card-example-2__learn-more" href="#">詳しくみる</a>
+        </div>
+      </div>
+      <div class="dads-card-example-2__image">
+        <svg class="dads-card-example-2__image-img" width="352" height="235" viewBox="0 0 352 235" role="img" aria-label="満開の桜の枝が青い水面を背景に咲き誇る春の風景写真" style="display:block;width:100%;height:100%;object-fit:cover"><rect width="352" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">352×235</text></svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-2">
+      <div class="dads-card-example-2__main">
+        <div class="dads-card-example-2__main-header">
+          <h2 class="dads-card-example-2__heading">子育て支援プログラム</h2>
+          <div class="dads-card-example-2__function">
+            <button type="button">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+                <circle cx="12" cy="4.5" r="1.5"/>
+                <circle cx="12" cy="12" r="1.5"/>
+                <circle cx="12" cy="19.5" r="1.5"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <p class="dads-card-example-2__contents">子育て世代の皆さまを応援する包括的なサポートプログラムです。育児相談から保育サービスまで幅広い支援を提供しています。</p>
+        <div class="dads-card-example-2__divider"></div>
+        <div class="dads-card-example-2__links">
+          <a class="dads-card-example-2__learn-more" href="#">詳しくみる</a>
+        </div>
+      </div>
+      <div class="dads-card-example-2__image">
+        <svg class="dads-card-example-2__image-img" width="352" height="235" viewBox="0 0 352 235" role="img" aria-label="満開の桜の枝が青い水面を背景に咲き誇る春の風景写真" style="display:block;width:100%;height:100%;object-fit:cover"><rect width="352" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">352×235</text></svg>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+
+<section class="example-section">
+<h2>Card / example-3: 縦型・アバター付き・subgrid高さ揃え</h2>
+
+<ul class="dads-card-example-3-list">
+  <li>
+    <div class="dads-card-example-3">
+      <div class="dads-card-example-3__main">
+        <div class="dads-card-example-3__main-header">
+          <div class="dads-card-example-3__heading">
+            <h2 class="dads-card-example-3__title">
+              <a class="dads-link" href="#">郵送する際のポイント</a>
+            </h2>
+            <span class="dads-card-example-3__label">お役立ち情報</span>
+          </div>
+          <svg class="dads-card-example-3__avatar" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="著者のアイコン"><rect width="64" height="64" rx="32" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="10" font-family="sans-serif">64×64</text></svg>
+        </div>
+        <div class="dads-card-example-3__contents">
+          <p>重要な書類を郵送する際に注意すべきポイントをご紹介します</p>
+        </div>
+      </div>
+      <div class="dads-card-example-3__sub">
+        <div class="dads-card-example-3__contents">
+          <p><svg width="304" height="235" viewBox="0 0 304 235" role="img" aria-label="ポストに書類を投函する人物のイラスト" style="display:block;max-width:100%;height:auto"><rect width="304" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">304×235</text></svg></p>
+        </div>
+        <ul class="dads-card-example-3__actions">
+          <li>
+            <button class="dads-button" type="button" data-size="sm" data-type="outline">
+              <svg class="dads-button__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 21-1.4-1.3a113 113 0 0 1-6.8-6.9 9 9 0 0 1-1.4-2.4Q2 9.3 2 8.2q0-2.4 1.6-4Q5 2.7 7.5 2.7a6 6 0 0 1 4.5 2 6 6 0 0 1 4.5-2q2.4 0 4 1.5 1.5 1.5 1.5 4 0 1.1-.4 2.2-.3 1-1.4 2.4t-2.6 3l-4.2 3.9zm0-2.7 6.4-6.4q.9-1 1.3-2l.3-1.7a3.4 3.4 0 0 0-3.5-3.5A4 4 0 0 0 12.9 7h-1.8q-.5-1-1.4-1.7-1-.6-2.2-.6A3.4 3.4 0 0 0 4 8.2l.3 1.7q.4 1 1.3 2 .9 1.2 2.5 2.7z" fill="currentcolor"/></svg>
+              お気に入り
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-3">
+      <div class="dads-card-example-3__main">
+        <div class="dads-card-example-3__main-header">
+          <div class="dads-card-example-3__heading">
+            <h2 class="dads-card-example-3__title">
+              <a class="dads-link" href="#">オンライン申請の手順</a>
+            </h2>
+            <span class="dads-card-example-3__label">手続きガイド</span>
+          </div>
+          <svg class="dads-card-example-3__avatar" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="著者のアイコン"><rect width="64" height="64" rx="32" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="10" font-family="sans-serif">64×64</text></svg>
+        </div>
+        <div class="dads-card-example-3__contents">
+          <p>マイナンバーカードを使った各種オンライン申請の基本的な手順を分かりやすく解説します</p>
+        </div>
+      </div>
+      <div class="dads-card-example-3__sub">
+        <div class="dads-card-example-3__contents">
+          <p><svg width="304" height="235" viewBox="0 0 304 235" role="img" aria-label="ポストに書類を投函する人物のイラスト" style="display:block;max-width:100%;height:auto"><rect width="304" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">304×235</text></svg></p>
+        </div>
+        <ul class="dads-card-example-3__actions">
+          <li>
+            <button class="dads-button" type="button" data-size="sm" data-type="outline">
+              <svg class="dads-button__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><path d="m12 21-1.4-1.3a113 113 0 0 1-6.8-6.9 9 9 0 0 1-1.4-2.4Q2 9.3 2 8.2q0-2.4 1.6-4Q5 2.7 7.5 2.7a6 6 0 0 1 4.5 2 6 6 0 0 1 4.5-2q2.4 0 4 1.5 1.5 1.5 1.5 4 0 1.1-.4 2.2-.3 1-1.4 2.4t-2.6 3l-4.2 3.9zm0-2.7 6.4-6.4q.9-1 1.3-2l.3-1.7a3.4 3.4 0 0 0-3.5-3.5A4 4 0 0 0 12.9 7h-1.8q-.5-1-1.4-1.7-1-.6-2.2-.6A3.4 3.4 0 0 0 4 8.2l.3 1.7q.4 1 1.3 2 .9 1.2 2.5 2.7z" fill="currentcolor"/></svg>
+              お気に入り
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+
+<section class="example-section">
+<h2>Card / example-4: 平型・テキスト主体・アクションボタン付き</h2>
+
+<ul class="dads-card-example-4-list">
+  <li>
+    <div class="dads-card-example-4">
+      <h2 class="dads-card-example-4__heading">アジア地域における交通問題</h2>
+      <div class="dads-card-example-4__function">
+        <button type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+            <circle cx="12" cy="4.5" r="1.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="19.5" r="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="dads-card-example-4__contents">
+        <svg width="415" height="235" viewBox="0 0 415 235" role="img" aria-label="中国の都市部の通りを多くの人々が自転車やバイクで行き交う様子" style="display:block;max-width:100%;height:auto"><rect width="415" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">415×235</text></svg>
+      </div>
+      <ul class="dads-card-example-4__actions">
+        <li><a class="dads-button" href="#" data-size="sm" data-type="outline">関連情報</a></li>
+        <li><a class="dads-button" href="#" data-size="sm" data-type="solid-fill">詳しくみる</a></li>
+      </ul>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-4">
+      <h2 class="dads-card-example-4__heading">持続可能な都市開発の最新動向</h2>
+      <div class="dads-card-example-4__function">
+        <button type="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+            <circle cx="12" cy="4.5" r="1.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="19.5" r="1.5"/>
+          </svg>
+        </button>
+      </div>
+      <div class="dads-card-example-4__contents">
+        <svg width="415" height="235" viewBox="0 0 415 235" role="img" aria-label="中国の都市部の通りを多くの人々が自転車やバイクで行き交う様子" style="display:block;max-width:100%;height:auto"><rect width="415" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">415×235</text></svg>
+      </div>
+      <ul class="dads-card-example-4__actions">
+        <li><a class="dads-button" href="#" data-size="sm" data-type="outline">関連情報</a></li>
+        <li><a class="dads-button" href="#" data-size="sm" data-type="solid-fill">詳しくみる</a></li>
+      </ul>
+    </div>
+  </li>
+</ul>
+
+</section>
+
+<section class="example-section">
+<h2>Card / example-5: 縦型・日付バッジ・ボタン色テーマ変数上書き</h2>
+
+<ul class="dads-card-example-5-list">
+  <li>
+    <div class="dads-card-example-5">
+      <a class="dads-card-example-5__link" href="#">
+        <h2 class="dads-card-example-5__heading">
+          <svg class="dads-card-example-5__image-img" width="398" height="235" viewBox="0 0 398 235" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="398" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">398×235</text></svg>
+          <span class="dads-card-example-5__image-label">
+            <span class="dads-card-example-5__month">12月</span>
+            <span class="dads-card-example-5__date">27<span class="dads-u-visually-hidden">日</span></span>
+          </span>
+          <span class="dads-card-example-5__label">トラベル情報</span>
+          <b class="dads-card-example-5__title">鳥の野鳥観察ツアー</b>
+        </h2>
+      </a>
+      <div class="dads-card-example-5__sub">
+        <div class="dads-card-example-5__contents">大自然の中で野鳥を観察できます。ガイド付きで安心してご参加いただけます。</div>
+        <ul class="dads-card-example-5__actions">
+          <li><button class="dads-button" type="button" data-size="sm" data-type="outline">共有する</button></li>
+          <li><button class="dads-button" type="button" data-size="sm" data-type="solid-fill">あとで読む</button></li>
+        </ul>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-5">
+      <a class="dads-card-example-5__link" href="#">
+        <h2 class="dads-card-example-5__heading">
+          <svg class="dads-card-example-5__image-img" width="398" height="235" viewBox="0 0 398 235" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="398" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">398×235</text></svg>
+          <span class="dads-card-example-5__image-label">
+            <span class="dads-card-example-5__month">1月</span>
+            <span class="dads-card-example-5__date">15<span class="dads-u-visually-hidden">日</span></span>
+          </span>
+          <span class="dads-card-example-5__label">宿泊情報</span>
+          <b class="dads-card-example-5__title">温泉リゾート滞在プラン</b>
+        </h2>
+      </a>
+      <div class="dads-card-example-5__sub">
+        <div class="dads-card-example-5__contents">美しい山間の温泉で心身ともにリフレッシュ。地元の食材を使った料理もお楽しみいただけます。</div>
+        <ul class="dads-card-example-5__actions">
+          <li><button class="dads-button" type="button" data-size="sm" data-type="outline">共有する</button></li>
+          <li><button class="dads-button" type="button" data-size="sm" data-type="solid-fill">あとで読む</button></li>
+        </ul>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+
+<section class="example-section">
+<h2>Card / example-6: 選択カード・:has(:checked)で状態背景変化</h2>
+
+<ul class="dads-card-example-6-list">
+  <li>
+    <div class="dads-card-example-6">
+      <div class="dads-card-example-6__main">
+        <h2 class="dads-card-example-6__heading">
+          <label for="card-6-checkbox-1">新卒採用向けセミナー</label>
+        </h2>
+        <p class="dads-card-example-6__contents">人事から業務内容やキャリアパスについてご説明します</p>
+      </div>
+      <div class="dads-card-example-6__image">
+        <span class="dads-card-example-6__checkbox">
+          <span class="dads-checkbox" data-size="sm">
+            <span class="dads-checkbox__checkbox">
+              <input id="card-6-checkbox-1" class="dads-checkbox__input" type="checkbox">
+            </span>
+          </span>
+        </span>
+        <svg class="dads-card-example-6__image-img" width="352" height="235" viewBox="0 0 352 235" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="352" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">352×235</text></svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-6">
+      <div class="dads-card-example-6__main">
+        <h2 class="dads-card-example-6__heading">
+          <label for="card-6-checkbox-2">中途採用者向け研修</label>
+        </h2>
+        <p class="dads-card-example-6__contents">経験者向けのスキルアップ研修とチーム連携について学習します</p>
+      </div>
+      <div class="dads-card-example-6__image">
+        <span class="dads-card-example-6__checkbox">
+          <span class="dads-checkbox" data-size="sm">
+            <span class="dads-checkbox__checkbox">
+              <input id="card-6-checkbox-2" class="dads-checkbox__input" type="checkbox">
+            </span>
+          </span>
+        </span>
+        <svg class="dads-card-example-6__image-img" width="352" height="235" viewBox="0 0 352 235" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="352" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">352×235</text></svg>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="dads-card-example-6">
+      <div class="dads-card-example-6__main">
+        <h2 class="dads-card-example-6__heading">
+          <label for="card-6-checkbox-3">マネジメント講座</label>
+        </h2>
+        <p class="dads-card-example-6__contents">リーダーシップとプロジェクト管理の基礎を学ぶ実践的な講座です</p>
+      </div>
+      <div class="dads-card-example-6__image">
+        <span class="dads-card-example-6__checkbox">
+          <span class="dads-checkbox" data-size="sm">
+            <span class="dads-checkbox__checkbox">
+              <input id="card-6-checkbox-3" class="dads-checkbox__input" type="checkbox">
+            </span>
+          </span>
+        </span>
+        <svg class="dads-card-example-6__image-img" width="352" height="235" viewBox="0 0 352 235" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="352" height="235" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="16" font-family="sans-serif">352×235</text></svg>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- button -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Button</h2>
+
+<div style="display: grid; grid-template-columns: repeat(5, auto); gap: 1rem; justify-content: start">
+  <div><button class="dads-button" data-size="lg" data-type="solid-fill">ボタン</button></div>
+  <div><button class="dads-button" data-size="lg" data-type="solid-fill" disabled>ボタン</button></div>
+  <div><button class="dads-button" data-size="md" data-type="solid-fill">ボタン</button></div>
+  <div><button class="dads-button" data-size="sm" data-type="solid-fill">ボタン</button></div>
+  <div><button class="dads-button" data-size="xs" data-type="solid-fill">ボタン</button></div>
+  <div><button class="dads-button" data-size="lg" data-type="outline">ボタン</button></div>
+  <div><button class="dads-button" data-size="lg" data-type="outline" disabled>ボタン</button></div>
+  <div><button class="dads-button" data-size="md" data-type="outline">ボタン</button></div>
+  <div><button class="dads-button" data-size="sm" data-type="outline">ボタン</button></div>
+  <div><button class="dads-button" data-size="xs" data-type="outline">ボタン</button></div>
+  <div><button class="dads-button" data-size="lg" data-type="text">ボタン</button></div>
+  <div><button class="dads-button" data-size="lg" data-type="text" disabled>ボタン</button></div>
+  <div><button class="dads-button" data-size="md" data-type="text">ボタン</button></div>
+  <div><button class="dads-button" data-size="sm" data-type="text">ボタン</button></div>
+  <div><button class="dads-button" data-size="xs" data-type="text">ボタン</button></div>
+  <div>
+    <button class="dads-button" data-size="lg" data-type="solid-fill">
+      <svg class="dads-button__icon" width="24" height="24" aria-hidden="true"><path d="M21 11H13V3H11V11H3V13H11V21H13V13H21V11Z" fill="currentcolor"/></svg>
+      ボタン
+      <svg class="dads-button__icon" width="16" height="16" viewBox="0 0 48 48" role="img" aria-label="新規タブで開きます"><path d="M22 6V9H9V39H39V26H42V42H6V6H22ZM42 6V20H39V11.2L21 29L19 27L36.8 9H28V6H42Z" fill="currentcolor"/></svg>
+    </button>
+  </div>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- calendar -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Calendar</h2>
+
+<dads-calendar class="dads-calendar" role="application" data-js-calendar>
+  <div class="dads-u-visually-hidden"><h2 data-js-calendar-heading aria-live="polite"></h2></div>
+  <div class="dads-calendar__controls">
+    <span class="dads-select">
+      <span class="dads-select__control">
+        <select class="dads-select__select" data-size="sm" aria-label="年" data-js-year-select></select>
+        <svg class="dads-select__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+        </svg>
+      </span>
+    </span>
+    <div class="dads-calendar__navigation">
+      <button class="dads-button dads-calendar__nav-button" data-size="sm" data-type="outline" data-js-prev-month-button>
+        <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="前の月">
+          <path d="m5.27 8 5.33-5.33-.93-.94L3.4 8l6.27 6.27.93-.94L5.27 8Z" fill="currentcolor"/>
+        </svg>
+      </button>
+      <p class="dads-calendar__current-month" data-js-current-month></p>
+      <button class="dads-button dads-calendar__nav-button" data-size="sm" data-type="outline" data-js-next-month-button>
+        <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="次の月">
+          <path d="m6 1.73-.93.94L10.4 8l-5.33 5.33.93.94L12.27 8 6 1.73Z" fill="currentcolor"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <table class="dads-calendar__table" role="grid" data-js-calendar-table>
+    <thead>
+      <tr>
+        <th class="dads-calendar__header-cell" scope="col">日</th>
+        <th class="dads-calendar__header-cell" scope="col">月</th>
+        <th class="dads-calendar__header-cell" scope="col">火</th>
+        <th class="dads-calendar__header-cell" scope="col">水</th>
+        <th class="dads-calendar__header-cell" scope="col">木</th>
+        <th class="dads-calendar__header-cell" scope="col">金</th>
+        <th class="dads-calendar__header-cell" scope="col">土</th>
+      </tr>
+    </thead>
+    <tbody data-js-calendar-tbody>
+      <template data-js-cell-template>
+        <td class="dads-calendar__data-cell" role="gridcell">
+          <button class="dads-calendar__date" data-js-date-button></button>
+        </td>
+      </template>
+    </tbody>
+  </table>
+  <div class="dads-calendar__footer">
+    <button class="dads-button" data-size="sm" data-type="text" data-js-delete-button>削除</button>
+    <button class="dads-button" data-size="sm" data-type="outline" data-js-today-button>今日</button>
+  </div>
+</dads-calendar>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- checkbox -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Checkbox</h2>
+
+<!-- サイズ×状態マトリクス: lg / md / sm × 通常・チェック済・エラー・無効 -->
+<div style="display: grid; grid-template-columns: repeat(6, auto); gap: 2rem; justify-content: start">
+
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="lg">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="md">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked aria-invalid="true"></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+  <label class="dads-checkbox" data-size="sm">
+    <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" checked disabled></span>
+    <span class="dads-checkbox__label">ラベル</span>
+  </label>
+
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- chip-label -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Chip Label</h2>
+
+<span class="dads-chip-label" data-style="text" data-color="gray">
+  <svg class="dads-chip-label__icon" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+    <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+  </svg>
+  ラベル
+</span>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- date-picker -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Date Picker</h2>
+
+<!-- 統合型 (年月日を1フィールドに) -->
+<dads-date-picker class="dads-date-picker" data-type="consolidated">
+  <div class="dads-date-picker__controls" data-size="md">
+    <div class="dads-date-picker__inputs">
+      <label class="dads-date-picker__year">
+        <span class="dads-date-picker__label">年</span>
+        <input class="dads-date-picker__input" type="text" inputmode="numeric" pattern="[0-9]+" data-js-year-input>
+      </label>
+      <label class="dads-date-picker__month">
+        <span class="dads-date-picker__label">月</span>
+        <input class="dads-date-picker__input" type="text" inputmode="numeric" pattern="[0-9]+" data-js-month-input>
+      </label>
+      <label class="dads-date-picker__day">
+        <span class="dads-date-picker__label">日</span>
+        <input class="dads-date-picker__input" type="text" inputmode="numeric" pattern="[0-9]+" data-js-day-input>
+      </label>
+    </div>
+    <button class="dads-date-picker__calendar-button" type="button" aria-haspopup="dialog" aria-expanded="false" data-js-calendar-button>
+      <svg class="dads-date-picker__calendar-icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="カレンダー">
+        <path d="M9 16.5C7.62 16.5 6.5 15.38 6.5 14C6.5 12.62 7.62 11.5 9 11.5C10.38 11.5 11.5 12.62 11.5 14C11.5 15.38 10.38 16.5 9 16.5ZM5 22C3.9 22 3 21.09 3 20V6C3 4.91 3.91 4 5 4H6V2H8V4H16V2H18V4H19C20.09 4 21 4.91 21 6V20C21 21.09 20.09 22 19 22H5ZM5 20H19V10H5V20Z" fill="currentcolor"/>
+      </svg>
+      <svg class="dads-date-picker__calendar-chevron" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 17.1L3 8L4 7L12 15L20 7L21 8L12 17.1Z" fill="currentcolor"/>
+      </svg>
+    </button>
+    <div class="dads-date-picker__calendar-popover" role="dialog" aria-label="カレンダー" aria-modal="true" data-js-calendar-popover style="display: none;">
+      <div class="dads-date-picker__backdrop" data-js-backdrop></div>
+      <dads-calendar class="dads-calendar" role="application" data-js-calendar>
+        <div class="dads-u-visually-hidden"><h2 data-js-calendar-heading aria-live="polite"></h2></div>
+        <div class="dads-calendar__controls">
+          <span class="dads-select">
+            <span class="dads-select__control">
+              <select class="dads-select__select" data-size="sm" aria-label="年" data-js-year-select></select>
+              <svg class="dads-select__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+              </svg>
+            </span>
+          </span>
+          <div class="dads-calendar__navigation">
+            <button class="dads-button dads-calendar__nav-button" data-size="sm" data-type="outline" data-js-prev-month-button>
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="前の月">
+                <path d="m5.27 8 5.33-5.33-.93-.94L3.4 8l6.27 6.27.93-.94L5.27 8Z" fill="currentcolor"/>
+              </svg>
+            </button>
+            <p class="dads-calendar__current-month" data-js-current-month></p>
+            <button class="dads-button dads-calendar__nav-button" data-size="sm" data-type="outline" data-js-next-month-button>
+              <svg width="16" height="16" viewBox="0 0 16 16" role="img" aria-label="次の月">
+                <path d="m6 1.73-.93.94L10.4 8l-5.33 5.33.93.94L12.27 8 6 1.73Z" fill="currentcolor"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <table class="dads-calendar__table" role="grid" data-js-calendar-table>
+          <thead>
+            <tr>
+              <th class="dads-calendar__header-cell" scope="col">日</th>
+              <th class="dads-calendar__header-cell" scope="col">月</th>
+              <th class="dads-calendar__header-cell" scope="col">火</th>
+              <th class="dads-calendar__header-cell" scope="col">水</th>
+              <th class="dads-calendar__header-cell" scope="col">木</th>
+              <th class="dads-calendar__header-cell" scope="col">金</th>
+              <th class="dads-calendar__header-cell" scope="col">土</th>
+            </tr>
+          </thead>
+          <tbody data-js-calendar-tbody>
+            <template data-js-cell-template>
+              <td class="dads-calendar__data-cell" role="gridcell">
+                <button class="dads-calendar__date" data-js-date-button></button>
+              </td>
+            </template>
+          </tbody>
+        </table>
+        <div class="dads-calendar__footer">
+          <button class="dads-button" data-size="sm" data-type="text" data-js-delete-button>削除</button>
+          <button class="dads-button" data-size="sm" data-type="outline" data-js-today-button>今日</button>
+        </div>
+      </dads-calendar>
+    </div>
+  </div>
+</dads-date-picker>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- description-list -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Description List</h2>
+
+<!-- data-marker="none": マーカーなし (確認画面等の用途) -->
+<dl class="dads-description-list" data-marker="none">
+  <div class="dads-description-list__item">
+    <dt>氏名</dt>
+    <dd>山田 太郎</dd>
+  </div>
+  <div class="dads-description-list__item">
+    <dt>メールアドレス</dt>
+    <dd>taro.yamada@example.com</dd>
+  </div>
+  <div class="dads-description-list__item">
+    <dt>電話番号</dt>
+    <dd>03-0000-0000</dd>
+  </div>
+</dl>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- disclosure -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Disclosure</h2>
+
+<!-- accordion より軽量な単体開閉。<details>/<summary> ベース -->
+<details class="dads-disclosure" open>
+  <summary id="disclosure-summary" class="dads-disclosure__summary">
+    <svg class="dads-disclosure__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="11" fill="currentcolor"/>
+      <circle class="dads-disclosure__icon-circle" cx="12" cy="12" r="8" fill="currentcolor"/>
+      <path class="dads-disclosure__icon-triangle" d="M17 10H7L12 15L17 10Z" fill="Canvas"/>
+    </svg>
+    詳細を表示する
+  </summary>
+  <div class="dads-disclosure__content">
+    <p>開閉コンテンツが入ります。accordionと異なりh要素を持たない単体用途に適しています。</p>
+    <a class="dads-disclosure__back-link" href="#disclosure-summary">
+      <svg class="dads-disclosure__back-link-icon" width="24" height="24" fill="none" aria-hidden="true">
+        <path d="M6 7V14.5C6 16.8 8.2 19 10.5 19C12.8 19 15 16.8 15 14.5V6M10.709 9.7L15 5.414L19.291 9.7" stroke="currentcolor" stroke-width="2" />
+      </svg>
+      先頭に戻る
+    </a>
+  </div>
+</details>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- divider -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Divider</h2>
+
+<div style="display: flex; flex-direction: column; row-gap: 2rem">
+  <hr class="dads-divider" data-color="solid-gray-420" data-style="solid" data-width="1" />
+  <hr class="dads-divider" data-color="solid-gray-536" data-style="solid" data-width="1" />
+  <hr class="dads-divider" data-color="black" data-style="solid" data-width="1" />
+  <hr class="dads-divider" data-color="solid-gray-420" data-style="solid" data-width="2" />
+  <hr class="dads-divider" data-color="solid-gray-536" data-style="solid" data-width="2" />
+  <hr class="dads-divider" data-color="black" data-style="solid" data-width="2" />
+  <hr class="dads-divider" data-color="solid-gray-420" data-style="dashed" data-width="1" />
+  <hr class="dads-divider" data-color="solid-gray-536" data-style="dashed" data-width="1" />
+  <hr class="dads-divider" data-color="black" data-style="dashed" data-width="1" />
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- drawer -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Drawer</h2>
+
+<!-- トリガーボタン -->
+<button class="dads-hamburger-menu-button" type="button" onclick="document.getElementById('drawer').showModal()">
+  <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="currentcolor"/>
+  </svg>
+  メニュー
+</button>
+
+<!-- Drawer本体: <dialog> 要素ベース -->
+<dialog id="drawer" class="dads-drawer" data-placement="right" aria-labelledby="drawer-heading">
+  <h2 id="drawer-heading" class="dads-u-visually-hidden">メニュー</h2>
+  <div class="dads-drawer__header">
+    <button class="dads-hamburger-menu-button" type="button" onclick="document.getElementById('drawer').close()">
+      <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M32 95L25 88L53 60L25 32L32 25L60 53L88 25L95 32L67 60L95 88L88 95L60 67L32 95Z" fill="currentcolor"/>
+      </svg>
+      閉じる
+    </button>
+  </div>
+  <div class="dads-drawer__body">
+    <p style="padding: 1rem;">ドロワーのコンテンツが入ります。</p>
+  </div>
+</dialog>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- emergency-banner -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Emergency Banner</h2>
+
+<article class="dads-emergency-banner">
+  <header class="dads-emergency-banner__header">
+    <h2 class="dads-emergency-banner__heading">【緊急】〇〇地区に避難準備情報が発令されました</h2>
+    <time class="dads-emergency-banner__timestamp" datetime="2024-01-01T06:00:00+09:00">2024年1月1日 06:00更新</time>
+  </header>
+  <div class="dads-emergency-banner__body">
+    <p>1時23分に○○地区に対して避難準備情報が発令されました。お年寄りの方等避難に時間がかかる方は、直ちに指定避難所へ避難してください。</p>
+  </div>
+  <div class="dads-emergency-banner__action">
+    <a class="dads-emergency-banner__button" href="#" target="_blank">
+      指定避難所を確認する
+      <span class="dads-emergency-banner__button-icon">
+        <svg class="dads-emergency-banner__button-icon-glyph" width="16" height="16" viewBox="0 0 48 48" role="img" aria-label="新規タブで開きます">
+          <path d="M22 6V9H9V39H39V26H42V42H6V6H22ZM42 6V20H39V11.2L21 29L19 27L36.8 9H28V6H42Z" fill="currentcolor"/>
+        </svg>
+      </span>
+    </a>
+  </div>
+</article>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- file-upload -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>File Upload</h2>
+
+<div class="dads-form-control-label" data-size="md">
+  <label id="file-upload-1-label" class="dads-form-control-label__label" for="file-upload-1-input">
+    参照する画像・ドキュメント
+    <span class="dads-form-control-label__requirement" data-required="false">※任意</span>
+  </label>
+  <p id="file-upload-1-support-text" class="dads-form-control-label__support-text">
+    対応ファイル：PNG/JPEG/GIF形式の画像、Excel/Word/PowerPoint/PDF形式のドキュメント<br>
+    5ファイルまで選択可能。1ファイルあたり5MB（5,242,880バイト）まで、合計10MB（10,485,760バイト）まで
+  </p>
+  <div>
+    <dads-file-upload
+      class="dads-file-upload"
+      max-files="5"
+      max-total-size="10MB"
+      max-file-size="5MB"
+      data-error-invalid-type="PNG/JPEG/GIF形式の画像、Excel/Word/PowerPoint/PDF形式のドキュメントだけが選択できます。"
+    >
+      <input
+        id="file-upload-1-input"
+        class="dads-file-upload__input"
+        type="file"
+        name="file-upload-1"
+        multiple
+        accept=".png,.jpg,.jpeg,.gif,.xlsx,.xls,.docx,.doc,.pptx,.ppt,.pdf"
+        data-js-input
+      >
+
+      <div class="dads-u-visually-hidden" aria-live="polite" data-js-announcer></div>
+      <div class="dads-u-visually-hidden" aria-live="assertive" data-js-announcer-assertive></div>
+
+      <div class="dads-file-upload__inner">
+        <div class="dads-file-upload__drop-area" data-js-drop-area>
+          <div class="dads-file-upload__button-area">
+            <button
+              id="file-upload-1-button"
+              class="dads-button"
+              data-type="outline"
+              data-size="md"
+              type="button"
+              aria-labelledby="file-upload-1-label file-upload-1-button"
+              aria-describedby="file-upload-1-selected-files file-upload-1-error-messages file-upload-1-support-text"
+              data-js-select-button
+            >
+              ファイルを選択
+            </button>
+            <p>または、このエリア内にドラッグ＆ドロップ</p>
+          </div>
+          <p id="file-upload-1-selected-files" class="dads-file-upload__select-summary" data-js-select-summary></p>
+          <ul id="file-upload-1-error-messages" class="dads-file-upload__error-messages" data-js-error-messages></ul>
+          <p class="dads-file-upload__expand-drop-area">
+            <label class="dads-checkbox" data-size="md">
+              <span class="dads-checkbox__checkbox">
+                <input class="dads-checkbox__input" type="checkbox" data-js-expand-drop-area>
+              </span>
+              <span class="dads-checkbox__label">ドラッグ＆ドロップの範囲をこのブラウザウィンドウ全体に広げる</span>
+            </label>
+          </p>
+        </div>
+        <p class="dads-file-upload__empty-message" data-js-empty-message>ファイルが選択されていません</p>
+        <ul class="dads-file-upload__file-list" data-js-file-list hidden></ul>
+      </div>
+
+      <div class="dads-file-upload__viewport-overlay" data-js-viewport-overlay hidden>
+        <div class="dads-file-upload__viewport-overlay-message">
+          <span>このエリア内にファイルを</span><span>ドラッグ＆ドロップ</span>
+        </div>
+      </div>
+
+      <template data-js-template>
+        <li class="dads-file-upload__file-item">
+          <div class="dads-file-upload__file-marker"></div>
+          <div class="dads-file-upload__file-info" data-js-file-info>
+            <p>
+              <span class="dads-file-upload__file-name" data-slot="fileName"></span>
+              <span class="dads-file-upload__file-meta">
+                <span data-slot="fileSize"></span>（<span data-slot="fileSizeBytes"></span>バイト）
+              </span>
+            </p>
+          </div>
+          <button class="dads-file-upload__remove-button dads-button" data-type="text" data-size="xs" type="button" data-js-remove-button>解除</button>
+        </li>
+      </template>
+    </dads-file-upload>
+  </div>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- form-control-label -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Form Control Label</h2>
+
+<!-- 単一入力 (必須) -->
+<div class="dads-form-control-label" data-size="md">
+  <label class="dads-form-control-label__label" for="name-input">
+    氏名
+    <span class="dads-form-control-label__requirement" data-required="true">※必須</span>
+  </label>
+  <p class="dads-form-control-label__support-text">姓と名の間にスペースを入れてください。</p>
+</div>
+
+<!-- 複数選択 (任意) + エラー -->
+<fieldset class="dads-form-control-label" data-size="md" style="margin-top:2rem" aria-describedby="check-error check-support">
+  <legend class="dads-form-control-label__label">
+    該当する項目
+    <span class="dads-form-control-label__requirement" data-required="false">任意</span>
+  </legend>
+  <p id="check-support" class="dads-form-control-label__support-text">該当するものをすべて選択してください。</p>
+  <div>
+    <label class="dads-checkbox" data-size="md">
+      <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+      <span class="dads-checkbox__label">選択肢A</span>
+    </label>
+    <label class="dads-checkbox" data-size="md">
+      <span class="dads-checkbox__checkbox"><input class="dads-checkbox__input" type="checkbox" aria-invalid="true"></span>
+      <span class="dads-checkbox__label">選択肢B</span>
+    </label>
+  </div>
+  <p id="check-error" class="dads-form-control-label__error-text">＊エラーテキストが入ります。</p>
+</fieldset>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- global-menu -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Global Menu</h2>
+
+<ul class="dads-global-menu">
+  <li class="dads-global-menu__item">
+    <a class="dads-global-menu__item-inner" href="#">
+      <svg class="dads-global-menu__front-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+      </svg>
+      <span class="dads-global-menu__label">メニュー1</span>
+      <svg class="dads-global-menu__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+      </svg>
+    </a>
+  </li>
+  <li class="dads-global-menu__item">
+    <a class="dads-global-menu__item-inner" href="#">
+      <svg class="dads-global-menu__front-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+      </svg>
+      <span class="dads-global-menu__label">メニュー2</span>
+      <svg class="dads-global-menu__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+      </svg>
+    </a>
+  </li>
+</ul>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- hamburger-menu-button -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Hamburger Menu Button</h2>
+
+<div style="display: flex; align-items: center; column-gap: 2rem;">
+
+  <!-- 開く -->
+  <button class="dads-hamburger-menu-button" type="button">
+    <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="currentcolor"/>
+    </svg>
+    メニュー
+  </button>
+
+  <!-- 閉じる -->
+  <button class="dads-hamburger-menu-button" type="button">
+    <svg class="dads-hamburger-menu-button__icon" width="24" height="24" viewBox="0 0 120 120" aria-hidden="true">
+      <path d="M32 95L25 88L53 60L25 32L32 25L60 53L88 25L95 32L67 60L95 88L88 95L60 67L32 95Z" fill="currentcolor"/>
+    </svg>
+    閉じる
+  </button>
+
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- heading -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Heading</h2>
+
+<hgroup class="dads-heading" data-size="36" data-chip>
+  <p class="dads-heading__shoulder">ショルダーテキスト</p>
+  <h2 class="dads-heading__heading">
+    <span class="dads-heading__icon">
+      <svg class="dads-heading__icon-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+      </svg>
+    </span>
+    見出しテキスト
+  </h2>
+</hgroup>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- input-text -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Input Text</h2>
+
+<!-- 通常 -->
+<span class="dads-input-text">
+  <input class="dads-input-text__input" type="text" data-size="md" placeholder="テキストを入力">
+</span>
+
+<!-- エラー -->
+<span class="dads-input-text" style="margin-top:1rem;display:block">
+  <input class="dads-input-text__input" type="text" data-size="md" aria-invalid="true" aria-describedby="input-error">
+  <span id="input-error" class="dads-input-text__error-text">＊エラーテキストが入ります。</span>
+</span>
+
+<!-- 読み取り専用 -->
+<span class="dads-input-text" style="margin-top:1rem;display:block">
+  <input class="dads-input-text__input" type="text" data-size="md" value="読み取り専用の値" readonly>
+</span>
+
+<!-- 無効 -->
+<span class="dads-input-text" style="margin-top:1rem;display:block">
+  <input class="dads-input-text__input" type="text" data-size="md" value="無効" disabled>
+</span>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- language-selector -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Language Selector</h2>
+
+<dads-language-selector class="dads-language-selector">
+  <div class="dads-menu-list-box">
+    <button id="language-selector-opener" class="dads-menu-list-box__opener" type="button" aria-controls="language-selector-popup" aria-expanded="false" data-size="sm" data-style="text" data-text-weight="normal">
+      <svg class="dads-menu-list-box__opener-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="M12 21.5A9.5 9.5 0 0 1 2.5 12c0-5.2 4.3-9.5 9.5-9.5s9.6 4.3 9.5 9.5c0 5.2-4.3 9.5-9.5 9.5Zm0-1.5c1-1.3 1.7-2.8 2.1-4.3H10c.4 1.5 1 3 2.1 4.3Zm-2-.3c-.8-1.2-1.4-2.6-1.7-4H5c1 2 3 3.5 5.2 4Zm4 0c2.2-.5 4-2 5-4h-3.3c-.4 1.4-1 2.8-1.8 4Zm-9.7-5.5H8a13 13 0 0 1 0-4.4H4.3a8 8 0 0 0 0 4.4Zm5.2 0h5c.2-1.5.2-3 0-4.4h-5c-.2 1.5-.2 3 0 4.4Zm6.5 0h3.7a8 8 0 0 0 0-4.4H16c.2 1.5.2 3 0 4.4Zm-.3-5.9H19c-1-2-3-3.5-5.2-4 .8 1.2 1.4 2.6 1.8 4Zm-5.8 0H14A12 12 0 0 0 12 4a12 12 0 0 0-2.1 4.3Zm-5 0h3.4c.4-1.4 1-2.8 1.8-4-2.3.5-4.1 2-5.2 4Z"/>
+      </svg>
+      Language
+      <svg class="dads-menu-list-box__opener-arrow" width="16" height="16" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="m20.5 6.6-8 8-8-8L3.1 8l9.4 9.4L21.9 8l-1.4-1.4Z"/>
+      </svg>
+    </button>
+    <div id="language-selector-popup" class="dads-menu-list-box__popup" hidden>
+      <ul class="dads-menu-list">
+        <li>
+          <a class="dads-menu-list__item" href="#" lang="ja" hreflang="ja" data-type="box" data-size="regular" data-current aria-current="true">
+            <svg class="dads-menu-list__front-icon dads-language-selector__check" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+              <path d="m9.5 18-5.7-5.7 1.5-1.4 4.2 4.3L18.7 6l1.4 1.4L9.5 18Z"/>
+            </svg>
+            <span class="dads-menu-list__label">日本語</span>
+          </a>
+        </li>
+        <li>
+          <a class="dads-menu-list__item" href="#" lang="en" hreflang="en" data-type="box" data-size="regular">
+            <svg class="dads-menu-list__front-icon dads-language-selector__check" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+              <path d="m9.5 18-5.7-5.7 1.5-1.4 4.2 4.3L18.7 6l1.4 1.4L9.5 18Z"/>
+            </svg>
+            <span class="dads-menu-list__label">English</span>
+          </a>
+        </li>
+        <li>
+          <a class="dads-menu-list__item" href="#" lang="zh-cn" hreflang="zh-cn" data-type="box" data-size="regular">
+            <svg class="dads-menu-list__front-icon dads-language-selector__check" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+              <path d="m9.5 18-5.7-5.7 1.5-1.4 4.2 4.3L18.7 6l1.4 1.4L9.5 18Z"/>
+            </svg>
+            <span class="dads-menu-list__label">简体中文</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</dads-language-selector>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- link -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Link</h2>
+
+<a class="dads-link" href="#" target="_blank">
+  リンクテキスト
+  <svg class="dads-link__icon" width="16" height="16" viewBox="0 0 48 48" role="img" aria-label="新規タブで開きます">
+    <path d="M22 6V9H9V39H39V26H42V42H6V6H22ZM42 6V20H39V11.2L21 29L19 27L36.8 9H28V6H42Z" fill="currentcolor"/>
+  </svg>
+</a>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- list -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>List</h2>
+
+<!-- 箇条書き -->
+<ul class="dads-list" data-spacing="4">
+  <li>項目A</li>
+  <li>項目B（少し長めのテキストサンプルです）</li>
+  <li>
+    ネストあり
+    <ul class="dads-list" data-spacing="4">
+      <li>サブ項目1</li>
+      <li><a class="dads-link" href="#">サブ項目2（リンク）</a></li>
+    </ul>
+  </li>
+</ul>
+
+<!-- 番号付き -->
+<ul class="dads-list" data-marker="number" data-spacing="4" style="margin-top: 2rem">
+  <li><span>1. </span><span>最初の項目</span></li>
+  <li><span>2. </span><span>二番目の項目</span></li>
+  <li><span>3. </span><span>三番目の項目</span></li>
+</ul>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- menu-list -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Menu List</h2>
+
+<ul class="dads-menu-list">
+  <li>
+    <button class="dads-menu-list__item" type="button" data-type="standard" data-size="regular">
+      <span class="dads-menu-list__label">メニュー項目1</span>
+    </button>
+  </li>
+  <li>
+    <!-- data-expanded で子メニュー展開状態 / data-current で現在地 -->
+    <button class="dads-menu-list__item" type="button" data-type="standard" data-size="regular" data-expanded>
+      <span class="dads-menu-list__label">メニュー項目2</span>
+      <svg class="dads-menu-list__end-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+        <path d="M12.5 17.1 3.5 8l1-1 8 8 8-8 1 1-9 9.1Z"/>
+      </svg>
+    </button>
+    <ul class="dads-menu-list" style="--menu-list-indentation: 1;">
+      <li>
+        <button class="dads-menu-list__item" type="button" data-type="standard" data-size="regular">
+          <span class="dads-menu-list__label">メニュー項目2-1</span>
+        </button>
+      </li>
+      <li>
+        <button class="dads-menu-list__item" type="button" data-type="standard" data-size="regular" data-current>
+          <span class="dads-menu-list__label">メニュー項目2-2（現在地）</span>
+        </button>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <button class="dads-menu-list__item" type="button" data-type="standard" data-size="regular">
+      <span class="dads-menu-list__label">メニュー項目3</span>
+    </button>
+  </li>
+</ul>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- menu-list-box -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Menu List Box</h2>
+
+<dads-menu-list-box class="dads-menu-list-box">
+  <button id="menu-list-box-1-opener" class="dads-menu-list-box__opener" type="button" aria-controls="menu-list-box-1-menu" aria-haspopup="menu" aria-expanded="false" data-size="md" data-style="outlined">
+    <svg class="dads-menu-list-box__opener-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+      <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+    </svg>
+    メニュー
+    <svg class="dads-menu-list-box__opener-arrow" width="16" height="16" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+      <path d="m20.5 6.6-8 8-8-8L3.1 8l9.4 9.4L21.9 8l-1.4-1.4Z"/>
+    </svg>
+  </button>
+  <div class="dads-menu-list-box__popup" hidden>
+    <ul id="menu-list-box-1-menu" class="dads-menu-list" role="menu" aria-labelledby="menu-list-box-1-opener">
+      <li role="presentation">
+        <button class="dads-menu-list__item" type="button" data-type="box" data-size="regular" role="menuitem">
+          <span class="dads-menu-list__label">メニュー項目1</span>
+        </button>
+      </li>
+      <li role="presentation">
+        <button class="dads-menu-list__item" type="button" data-type="box" data-size="regular" role="menuitem">
+          <span class="dads-menu-list__label">メニュー項目2</span>
+        </button>
+      </li>
+      <li role="presentation">
+        <button class="dads-menu-list__item" type="button" data-type="box" data-size="regular" role="menuitem">
+          <span class="dads-menu-list__label">メニュー項目3</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</dads-menu-list-box>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- notification-banner -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Notification Banner</h2>
+
+<!-- エラー -->
+<div class="dads-notification-banner" data-style="standard" data-type="error">
+  <h2 class="dads-notification-banner__heading">
+    <svg class="dads-notification-banner__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="エラー">
+      <path d="M8.25 21 3 15.75v-7.5L8.25 3h7.5L21 8.25v7.5L15.75 21h-7.5Z" fill="currentcolor"/>
+      <path d="m12 13.4-2.85 2.85-1.4-1.4L10.6 12 7.75 9.15l1.4-1.4L12 10.6l2.85-2.85 1.4 1.4L13.4 12l2.85 2.85-1.4 1.4L12 13.4Z" fill="Canvas"/>
+    </svg>
+    <span class="dads-notification-banner__heading-text">操作を完了できませんでした</span>
+  </h2>
+  <button class="dads-notification-banner__close" type="button">
+    <svg class="dads-notification-banner__close-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z" fill="currentcolor"/>
+    </svg>
+    <span class="dads-notification-banner__close-label">閉じる</span>
+  </button>
+  <div class="dads-notification-banner__body">
+    <p>入力内容を確認して再度お試しください。</p>
+  </div>
+  <div class="dads-notification-banner__actions">
+    <button class="dads-button" data-size="md" data-type="outline">キャンセル</button>
+    <button class="dads-button" data-size="md" data-type="solid-fill">再試行</button>
+  </div>
+</div>
+
+<!-- 成功 -->
+<div class="dads-notification-banner" data-style="standard" data-type="success" style="margin-top:1rem">
+  <h2 class="dads-notification-banner__heading">
+    <svg class="dads-notification-banner__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="成功">
+      <circle cx="12" cy="12" r="9" fill="currentcolor"/>
+      <path d="m10 13.4-2.1-2.1-1.4 1.4L10 16.2l7.5-7.5-1.4-1.4L10 13.4Z" fill="Canvas"/>
+    </svg>
+    <span class="dads-notification-banner__heading-text">送信が完了しました</span>
+  </h2>
+  <button class="dads-notification-banner__close" type="button">
+    <svg class="dads-notification-banner__close-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z" fill="currentcolor"/>
+    </svg>
+    <span class="dads-notification-banner__close-label">閉じる</span>
+  </button>
+  <div class="dads-notification-banner__body">
+    <p>申請内容を受け付けました。</p>
+  </div>
+</div>
+
+<!-- 警告 -->
+<div class="dads-notification-banner" data-style="standard" data-type="warning" style="margin-top:1rem">
+  <h2 class="dads-notification-banner__heading">
+    <svg class="dads-notification-banner__icon" width="24" height="24" viewBox="0 0 24 24" role="img" aria-label="警告">
+      <path d="M2.7 21 12 4.5 21.3 21H2.7Z" fill="currentcolor"/>
+      <path d="M11 10h2v5h-2zm0 6h2v2h-2z" fill="Canvas"/>
+    </svg>
+    <span class="dads-notification-banner__heading-text">入力内容に注意が必要です</span>
+  </h2>
+  <button class="dads-notification-banner__close" type="button">
+    <svg class="dads-notification-banner__close-icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="m6.4 18.6-1-1 5.5-5.6-5.6-5.6 1.1-1 5.6 5.5 5.6-5.6 1 1.1L13 12l5.6 5.6-1 1L12 13l-5.6 5.6Z" fill="currentcolor"/>
+    </svg>
+    <span class="dads-notification-banner__close-label">閉じる</span>
+  </button>
+  <div class="dads-notification-banner__body">
+    <p>入力期限が近づいています。</p>
+  </div>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- radio -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Radio</h2>
+
+<!-- サイズ×状態マトリクス: lg / md / sm × 通常・選択済・エラー・無効 -->
+<div style="display: grid; grid-template-columns: repeat(6, auto); gap: 2rem; justify-content: start">
+
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-1"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-1" checked></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-2" aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-2" checked aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-3" disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="lg">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="lg-3" checked disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-1"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-1" checked></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-2" aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-2" checked aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-3" disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="md">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="md-3" checked disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-1"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-1" checked></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-2" aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-2" checked aria-invalid="true"></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-3" disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+  <label class="dads-radio" data-size="sm">
+    <span class="dads-radio__radio"><input class="dads-radio__input" type="radio" name="sm-3" checked disabled></span>
+    <span class="dads-radio__label">ラベル</span>
+  </label>
+
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- resource-list -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Resource List</h2>
+
+<ul style="margin: 0; display: grid; row-gap: 1rem; padding-left: 0; list-style-type: none;">
+
+  <li>
+    <div class="dads-resource-list" data-style="list">
+      <div class="dads-resource-list__body">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+          <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+        </svg>
+        <div class="dads-resource-list__contents">
+          <h2 class="dads-resource-list__title">リソースタイトル1</h2>
+          <div class="dads-resource-list__label"><p>ラベル</p></div>
+          <div class="dads-resource-list__support"><p>サポートテキスト</p></div>
+        </div>
+        <div class="dads-resource-list__sub"><p>サブラベル</p></div>
+      </div>
+      <div class="dads-resource-list__action">
+        <button class="dads-resource-list__action-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+            <circle cx="12" cy="4.5" r="1.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="19.5" r="1.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </li>
+
+  <li>
+    <div class="dads-resource-list" data-style="list">
+      <div class="dads-resource-list__body">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+          <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+        </svg>
+        <div class="dads-resource-list__contents">
+          <h2 class="dads-resource-list__title">リソースタイトル2</h2>
+          <div class="dads-resource-list__label"><p>ラベル</p></div>
+          <div class="dads-resource-list__support"><p>サポートテキスト</p></div>
+        </div>
+        <div class="dads-resource-list__sub"><p>サブラベル</p></div>
+      </div>
+      <div class="dads-resource-list__action">
+        <button class="dads-resource-list__action-button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentcolor" role="img" aria-label="メニュー">
+            <circle cx="12" cy="4.5" r="1.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+            <circle cx="12" cy="19.5" r="1.5"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </li>
+
+</ul>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- search-box -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Search Box</h2>
+
+<div class="dads-search-box">
+  <div class="dads-search-box__fields">
+    <label class="dads-search-box__select">
+      <span>検索対象</span>
+      <select name="scope">
+        <option value="">すべて</option>
+        <option value="images">画像</option>
+        <option value="files">ファイル</option>
+      </select>
+      <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+      </svg>
+    </label>
+    <label class="dads-search-box__input">
+      <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="m21 20.5-6-6a7.4 7.4 0 0 0 1.9-5A7.4 7.4 0 0 0 9.5 2 7.5 7.5 0 1 0 14 15.5l6 6 1-1ZM3.5 9.5a6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6 6 6 0 0 1-6-6Z" fill="currentcolor"/>
+      </svg>
+      <span class="dads-u-visually-hidden">検索</span>
+      <input type="search" name="q">
+    </label>
+  </div>
+  <button class="dads-button" type="submit" data-type="solid-fill" data-size="lg">検索</button>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- select -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Select</h2>
+
+<!-- 通常 -->
+<span class="dads-select">
+  <span class="dads-select__control">
+    <select class="dads-select__select" data-size="md">
+      <option value="">選択してください</option>
+      <option value="1">選択肢1</option>
+      <option value="2">選択肢2</option>
+      <option value="3">選択肢3</option>
+    </select>
+    <svg class="dads-select__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+    </svg>
+  </span>
+</span>
+
+<!-- エラー -->
+<span class="dads-select" style="margin-top:1rem;display:block">
+  <span class="dads-select__control">
+    <select class="dads-select__select" data-size="md" aria-invalid="true" aria-describedby="select-error">
+      <option value="">選択してください</option>
+      <option value="1">選択肢1</option>
+    </select>
+    <svg class="dads-select__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+    </svg>
+  </span>
+  <span id="select-error" class="dads-select__error-text">＊エラーテキストが入ります。</span>
+</span>
+
+<!-- 無効 -->
+<span class="dads-select" style="margin-top:1rem;display:block">
+  <span class="dads-select__control">
+    <select class="dads-select__select" data-size="md" disabled>
+      <option value="">選択してください</option>
+    </select>
+    <svg class="dads-select__chevron" width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 17L3 8L4 7L12 15L20 7L21 8L12 17Z" fill="currentcolor"/>
+    </svg>
+  </span>
+</span>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- step-navigation -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Step Navigation</h2>
+
+<!-- 水平 / data-reached で到達済みステップを表す -->
+<div class="dads-step-navigation" data-orientation="horizontal" data-size="normal">
+  <p class="dads-u-visually-hidden">全4ステップ中、2ステップ目まで到達済み</p>
+  <ul>
+    <li class="dads-step-navigation__step" data-reached>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">1</span>
+        <span class="dads-step-navigation__title">入力</span>
+      </span>
+    </li>
+    <li class="dads-step-navigation__step" data-current>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">2</span>
+        <span class="dads-step-navigation__title">確認</span>
+      </span>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">3</span>
+        <span class="dads-step-navigation__title">完了</span>
+      </span>
+    </li>
+  </ul>
+</div>
+
+<!-- 垂直 -->
+<div class="dads-step-navigation" data-orientation="vertical" data-size="normal" style="margin-top: 3rem">
+  <p class="dads-u-visually-hidden">全3ステップ中、1ステップ目まで到達済み</p>
+  <ul>
+    <li class="dads-step-navigation__step" data-current>
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">1</span>
+        <span class="dads-step-navigation__title">申請情報の入力</span>
+      </span>
+      <p class="dads-step-navigation__description">必要事項を入力してください。</p>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">2</span>
+        <span class="dads-step-navigation__title">内容の確認</span>
+      </span>
+      <p class="dads-step-navigation__description">入力内容を確認してください。</p>
+    </li>
+    <li class="dads-step-navigation__step">
+      <span class="dads-step-navigation__header">
+        <span class="dads-u-visually-hidden">ステップ</span>
+        <span class="dads-step-navigation__number">3</span>
+        <span class="dads-step-navigation__title">申請完了</span>
+      </span>
+    </li>
+  </ul>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- table -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Table</h2>
+
+<!-- 通常 -->
+<div class="dads-table">
+  <table class="dads-table__table">
+    <thead>
+      <tr>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>データ</td>
+        <td>データ</td>
+        <td>データ</td>
+        <td>データ</td>
+      </tr>
+      <tr>
+        <td>データ</td>
+        <td>データ</td>
+        <td>データ</td>
+        <td>データ</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- スクロールシャドウ付き -->
+<div class="dads-table" style="margin-top: 2rem; max-width: 400px;">
+  <dads-scroll-shadow style="--scroll-shadow-padding: 0px;">
+    <table class="dads-table__table">
+      <thead>
+        <tr>
+          <th class="dads-table__col-header" scope="col">列1</th>
+          <th class="dads-table__col-header" scope="col">列2</th>
+          <th class="dads-table__col-header" scope="col">列3</th>
+          <th class="dads-table__col-header" scope="col">列4</th>
+          <th class="dads-table__col-header" scope="col">列5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>データ1</td>
+          <td>データ2</td>
+          <td>データ3</td>
+          <td>データ4</td>
+          <td>データ5</td>
+        </tr>
+      </tbody>
+    </table>
+  </dads-scroll-shadow>
+</div>
+
+<!-- ストライプ -->
+<div class="dads-table" data-row-stripe style="margin-top: 2rem;">
+  <table class="dads-table__table" data-cell-border="bottom">
+    <thead>
+      <tr>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+        <th class="dads-table__col-header" scope="col">ラベル</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>データ</td><td>データ</td><td>データ</td></tr>
+      <tr><td>データ</td><td>データ</td><td>データ</td></tr>
+      <tr><td>データ</td><td>データ</td><td>データ</td></tr>
+    </tbody>
+  </table>
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- textarea -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Textarea</h2>
+
+<!-- 通常 -->
+<span class="dads-textarea">
+  <textarea class="dads-textarea__textarea" placeholder="テキストを入力"></textarea>
+</span>
+
+<!-- エラー -->
+<span class="dads-textarea" style="margin-top:1rem;display:block">
+  <textarea class="dads-textarea__textarea" aria-invalid="true" aria-describedby="textarea-error"></textarea>
+  <span id="textarea-error" class="dads-textarea__error-text">＊エラーテキストが入ります。</span>
+</span>
+
+<!-- 読み取り専用 -->
+<span class="dads-textarea" style="margin-top:1rem;display:block">
+  <textarea class="dads-textarea__textarea" readonly>読み取り専用の値</textarea>
+</span>
+
+<!-- 無効 -->
+<span class="dads-textarea" style="margin-top:1rem;display:block">
+  <textarea class="dads-textarea__textarea" disabled>無効</textarea>
+</span>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- utility-link -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Utility Link</h2>
+
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 1rem;">
+
+  <a class="dads-utility-link" href="#" target="_blank">
+    <svg class="dads-utility-link__lead-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+      <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+    </svg>
+    <span class="dads-utility-link__label">リンクテキスト</span>
+    <svg class="dads-utility-link__tail-icon" width="16" height="16" viewBox="0 0 48 48" fill="currentcolor" role="img" aria-label="新規タブで開きます">
+      <path d="M22 6V9H9V39H39V26H42V42H6V6H22ZM42 6V20H39V11.2L21 29L19 27L36.8 9H28V6H42Z"/>
+    </svg>
+  </a>
+
+  <a class="dads-utility-link" href="#">
+    <svg class="dads-utility-link__lead-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentcolor" aria-hidden="true">
+      <path d="M4.6 20.5c-.5-.1-1-.6-1.1-1l16-16c.5.1.9.6 1 1l-16 16Zm-1.1-6.4v-2L12 3.4h2.1L3.5 14.1Zm0-7.4V5.3c0-1 .8-1.8 1.8-1.8h1.4L3.5 6.7Zm13.8 13.8 3.2-3.2v1.4c0 1-.8 1.8-1.8 1.8h-1.4Zm-7.4 0L20.5 9.9v2L12 20.6H9.9Z"/>
+    </svg>
+    <span class="dads-utility-link__label">同一タブリンク</span>
+  </a>
+
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- carousel (画像はSVGプレースホルダーで代替) -->
+<!-- ============================================================ -->
+<section class="example-section example-carousel">
+<h2 style="padding: 0 2rem;">Carousel</h2>
+
+<dads-carousel class="dads-carousel" breakpoint-rem="64" role="region" aria-label="スライドショー" data-js-unit="スライド">
+  <div class="dads-carousel__inner">
+    <div class="dads-carousel__panels">
+      <div class="dads-carousel__panel-set">
+        <p class="dads-carousel__number dads-carousel__panel-number" aria-current="true" aria-hidden="true" data-js-current-number></p>
+        <div class="dads-carousel__main" aria-live="polite" aria-atomic="true">
+          <div class="dads-carousel__main-panel" data-js-main-panel>
+            <a class="dads-carousel__main-link" data-js-main-link>
+              <span class="dads-u-visually-hidden" data-js-main-label>スライド1</span>
+              <div class="dads-carousel__image-container" data-js-main-images>
+                <svg width="696" height="392" viewBox="0 0 696 392" aria-label="スライド1の画像" role="img" style="display:block;width:100%;height:auto"><rect width="696" height="392" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="24" font-family="sans-serif">Slide 1</text></svg>
+              </div>
+            </a>
+          </div>
+        </div>
+        <p class="dads-carousel__next">
+          <button type="button" data-js-next-button>
+            <span class="dads-carousel__next-image-container" data-js-next-image-container>
+              <svg width="696" height="392" viewBox="0 0 696 392" aria-hidden="true" style="display:block;width:100%;height:auto"><rect width="696" height="392" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="24" font-family="sans-serif">Slide 2</text></svg>
+            </span>
+            <span class="dads-carousel__next-image-label">次のスライド</span>
+          </button>
+        </p>
+        <div class="dads-carousel__main-bg"><div data-js-main-bg></div></div>
+        <div class="dads-carousel__next-bg"><div data-js-next-bg></div></div>
+      </div>
+    </div>
+    <div class="dads-carousel__controls">
+      <dads-carousel-step-nav>
+        <ul class="dads-carousel__step-nav" role="tablist" aria-label="スライド選択">
+          <li role="presentation">
+            <button class="dads-carousel__step dads-carousel__number" type="button" role="tab">
+              <span class="dads-u-visually-hidden">スライド</span>1
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="dads-carousel__step dads-carousel__number" type="button" role="tab">
+              <span class="dads-u-visually-hidden">スライド</span>2
+            </button>
+          </li>
+          <li role="presentation">
+            <button class="dads-carousel__step dads-carousel__number" type="button" role="tab">
+              <span class="dads-u-visually-hidden">スライド</span>3
+            </button>
+          </li>
+        </ul>
+      </dads-carousel-step-nav>
+      <p class="dads-carousel__page-nav">
+        <button type="button" data-js-prev-slide-button>
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="m5.27 8 5.33-5.33-.93-.94L3.4 8l6.27 6.27.93-.94L5.27 8Z" fill="currentcolor"></path>
+          </svg>
+          <span class="dads-u-visually-hidden">前のスライド</span>
+        </button>
+        <span data-js-current-slide></span>
+        <button type="button" data-js-next-slide-button>
+          <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+            <path d="m6 1.73-.93.94L10.4 8l-5.33 5.33.93.94L12.27 8 6 1.73Z" fill="currentcolor"></path>
+          </svg>
+          <span class="dads-u-visually-hidden">次のスライド</span>
+        </button>
+      </p>
+      <details class="dads-carousel__others dads-disclosure">
+        <summary class="dads-disclosure__summary">
+          <svg class="dads-disclosure__icon" width="24" height="24" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="11" fill="currentcolor"/>
+            <circle class="dads-disclosure__icon-circle" cx="12" cy="12" r="8" fill="currentcolor"/>
+            <path class="dads-disclosure__icon-triangle" d="M17 10H7L12 15L17 10Z" fill="Canvas"/>
+          </svg>
+          すべてのスライド
+        </summary>
+        <div class="dads-carousel__others-content dads-disclosure__content">
+          <ul data-js-slide-container>
+            <li class="dads-carousel__panel-set" data-js-slide>
+              <p class="dads-carousel__number dads-carousel__panel-number" aria-hidden="true">1</p>
+              <div class="dads-carousel__main">
+                <a class="dads-carousel__main-link">
+                  <span class="dads-u-visually-hidden">スライド1</span>
+                  <div class="dads-carousel__image-container">
+                    <svg width="696" height="392" viewBox="0 0 696 392" aria-label="スライド1の画像" role="img" style="display:block;width:100%;height:auto"><rect width="696" height="392" fill="#c8d0d8"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="24" font-family="sans-serif">Slide 1</text></svg>
+                  </div>
+                </a>
+              </div>
+              <div class="dads-carousel__main-bg"><div data-js-bg-container></div></div>
+            </li>
+            <li class="dads-carousel__panel-set" data-js-slide>
+              <p class="dads-carousel__number dads-carousel__panel-number" aria-hidden="true">2</p>
+              <div class="dads-carousel__main">
+                <a class="dads-carousel__main-link">
+                  <span class="dads-u-visually-hidden">スライド2</span>
+                  <div class="dads-carousel__image-container">
+                    <svg width="696" height="392" viewBox="0 0 696 392" aria-label="スライド2の画像" role="img" style="display:block;width:100%;height:auto"><rect width="696" height="392" fill="#b0bec5"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="24" font-family="sans-serif">Slide 2</text></svg>
+                  </div>
+                </a>
+              </div>
+              <div class="dads-carousel__main-bg"><div data-js-bg-container></div></div>
+            </li>
+            <li class="dads-carousel__panel-set" data-js-slide>
+              <p class="dads-carousel__number dads-carousel__panel-number" aria-hidden="true">3</p>
+              <div class="dads-carousel__main">
+                <a class="dads-carousel__main-link">
+                  <span class="dads-u-visually-hidden">スライド3</span>
+                  <div class="dads-carousel__image-container">
+                    <svg width="696" height="392" viewBox="0 0 696 392" aria-label="スライド3の画像" role="img" style="display:block;width:100%;height:auto"><rect width="696" height="392" fill="#90a4ae"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" fill="#6b7280" font-size="24" font-family="sans-serif">Slide 3</text></svg>
+                  </div>
+                </a>
+              </div>
+              <div class="dads-carousel__main-bg"><div data-js-bg-container></div></div>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </div>
+  </div>
+</dads-carousel>
+
+</section>
+
+</body>
+</html>
