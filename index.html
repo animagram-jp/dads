@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="form-control-label/form-control-label.css">
 <link rel="stylesheet" href="global-menu/global-menu.css">
 <link rel="stylesheet" href="hamburger-menu-button/hamburger-menu-button.css">
+<link rel="stylesheet" href="hamburger-menu-button/hamburger-menu-icon-button.css">
 <link rel="stylesheet" href="heading/heading.css">
 <link rel="stylesheet" href="input-text/input-text.css">
 <link rel="stylesheet" href="language-selector/language-selector.css">
@@ -45,6 +46,7 @@
 <link rel="stylesheet" href="textarea/textarea.css">
 <link rel="stylesheet" href="utility-link/utility-link.css">
 <link rel="stylesheet" href="carousel/carousel.css">
+<link rel="stylesheet" href="progress-indicator/progress-indicator.css">
 <script type="module" src="calendar/calendar.js"></script>
 <script type="module" src="date-picker/date-picker.js"></script>
 <script type="module" src="file-upload/file-upload.js"></script>
@@ -52,6 +54,8 @@
 <script type="module" src="menu-list-box/menu-list-box.js"></script>
 <script type="module" src="table/scroll-shadow.js"></script>
 <script type="module" src="carousel/carousel.js"></script>
+<script type="module" src="progress-indicator/progress-indicator.js"></script>
+<script type="module" src="textarea/textarea-counter.js"></script>
 <style>
   body { padding: 2rem; }
   .example-section { margin-block: 3rem; }
@@ -1111,6 +1115,25 @@
 
 </div>
 
+<!-- Icon Button -->
+<div style="display: flex; align-items: center; column-gap: 2rem; margin-top: 1rem;">
+
+  <!-- 開く -->
+  <button class="dads-hamburger-menu-icon-button" type="button" aria-label="メニューを開く">
+    <svg class="dads-hamburger-menu-icon-button__icon" width="44" height="44" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M3 18V16H21V18H3ZM3 13V11H21V13H3ZM3 8V6H21V8H3Z" fill="currentcolor"/>
+    </svg>
+  </button>
+
+  <!-- 閉じる -->
+  <button class="dads-hamburger-menu-icon-button" type="button" aria-label="メニューを閉じる">
+    <svg class="dads-hamburger-menu-icon-button__icon" width="44" height="44" viewBox="0 0 120 120" aria-hidden="true">
+      <path d="M32 95L25 88L53 60L25 32L32 25L60 53L88 25L95 32L67 60L95 88L88 95L60 67L32 95Z" fill="currentcolor"/>
+    </svg>
+  </button>
+
+</div>
+
 </section>
 
 <!-- ============================================================ -->
@@ -1812,6 +1835,21 @@
   <textarea class="dads-textarea__textarea" disabled>無効</textarea>
 </span>
 
+<!-- 文字数カウンター -->
+<div class="dads-form-control-label" data-size="md" style="margin-top:1rem;">
+  <label class="dads-form-control-label__label" for="counter-textarea">
+    ラベル
+    <span class="dads-form-control-label__requirement" data-required="true">※必須</span>
+  </label>
+  <p id="counter-support-text" class="dads-form-control-label__support-text">20文字以内で入力してください</p>
+  <div>
+    <span class="dads-textarea">
+      <textarea id="counter-textarea" class="dads-textarea__textarea" aria-describedby="counter-support-text"></textarea>
+      <dads-textarea-counter class="dads-textarea__counter" for="counter-textarea" max="20"></dads-textarea-counter>
+    </span>
+  </div>
+</div>
+
 </section>
 
 <!-- ============================================================ -->
@@ -1838,6 +1876,85 @@
     </svg>
     <span class="dads-utility-link__label">同一タブリンク</span>
   </a>
+
+</div>
+
+</section>
+
+<!-- ============================================================ -->
+<!-- progress-indicator -->
+<!-- ============================================================ -->
+<section class="example-section">
+<h2>Progress Indicator</h2>
+
+<!-- Static -->
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 1.5rem;">
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="stacked" intent="passive" active>
+    <svg class="dads-progress-indicator__static" data-js-indicator width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path fill="currentcolor" d="M17 15c0 2.5 2.2 7 7 7s7-5 7-7H17ZM15 42h18c0-2-1-4.5-1-4.5L24 34l-8 3.5S15 40 15 42Z"/>
+      <path fill="none" stroke="currentcolor" stroke-width="2" d="M24 24C34.5 24 35.5 6 35.5 4.8V4M24 24C13.5 24 12.5 6 12.5 4.8V4M24 24c7 0 11.5 11.8 11.5 18.3V44M24 24c-7 0-11.5 11.8-11.5 18.3V44M9 4h30M9 44h30"/>
+      <circle cx="24" cy="28" r="1" fill="currentcolor"/>
+      <circle cx="24" cy="31" r="1" fill="currentcolor"/>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル</span>
+  </dads-progress-indicator>
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="inlined" intent="passive" active>
+    <svg class="dads-progress-indicator__static" data-js-indicator width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+      <path fill="currentcolor" d="M9 6c0 1.8 1.1 5 3.5 5S16 7.4 16 6H9ZM8 21h9c0-1-.5-2.2-.5-2.2l-4-1.8-4 1.8S8 20 8 21Z"/>
+      <path fill="none" stroke="currentcolor" d="M4 1.5h17m-17 21h17M6 1.5C6 5.1 7.6 12 12.5 12S18.9 5 19 1.5M19 22.5c.3-3.7-2.2-10.5-6.5-10.5S5.7 18.8 6 22.5"/>
+      <circle cx="12.5" cy="13.5" r=".5" fill="currentcolor"/>
+      <circle cx="12.5" cy="15.5" r=".5" fill="currentcolor"/>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル</span>
+  </dads-progress-indicator>
+
+</div>
+
+<!-- Linear Fill -->
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center; margin-bottom: 1.5rem;">
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="stacked" intent="passive" value="70" active>
+    <svg class="dads-progress-indicator__linear" data-js-indicator width="240" height="4" viewBox="0 0 240 4" stroke="currentcolor" fill="none" aria-hidden="true">
+      <line class="dads-progress-indicator__track" x1="0" y1="2" x2="240" y2="2" stroke-width="4"></line>
+      <line class="dads-progress-indicator__bar" x1="0" y1="2" x2="240" y2="2" stroke-width="4" pathLength="100"></line>
+      <line class="dads-progress-indicator__border" x1="0" y1="3.5" x2="240" y2="3.5" stroke-width="1"></line>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル <span class="dads-progress-indicator__percentage" data-js-percentage></span></span>
+  </dads-progress-indicator>
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="inlined" intent="passive" value="70" active>
+    <svg class="dads-progress-indicator__linear" data-js-indicator width="80" height="4" viewBox="0 0 80 4" stroke="currentcolor" fill="none" aria-hidden="true">
+      <line class="dads-progress-indicator__track" x1="0" y1="2" x2="80" y2="2" stroke-width="4"></line>
+      <line class="dads-progress-indicator__bar" x1="0" y1="2" x2="80" y2="2" stroke-width="4" pathLength="100"></line>
+      <line class="dads-progress-indicator__border" x1="0" y1="3.5" x2="80" y2="3.5" stroke-width="1"></line>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル <span class="dads-progress-indicator__percentage" data-js-percentage></span></span>
+  </dads-progress-indicator>
+
+</div>
+
+<!-- Spinner Fill -->
+<div style="display: flex; flex-wrap: wrap; gap: 2rem; align-items: center;">
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="stacked" intent="passive" value="70" active>
+    <svg class="dads-progress-indicator__spinner" data-js-indicator width="48" height="48" viewBox="0 0 48 48" stroke="currentcolor" fill="none" aria-hidden="true">
+      <circle class="dads-progress-indicator__track" cx="24" cy="24" r="22" stroke-width="4"></circle>
+      <g><g><circle class="dads-progress-indicator__bar" cx="24" cy="24" r="22" stroke-width="4" pathLength="100"></circle></g></g>
+      <circle class="dads-progress-indicator__border" cx="24" cy="24" r="23.5" stroke-width="1"></circle>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル <span class="dads-progress-indicator__percentage" data-js-percentage></span></span>
+  </dads-progress-indicator>
+
+  <dads-progress-indicator class="dads-progress-indicator" data-type="inlined" intent="passive" value="70" active>
+    <svg class="dads-progress-indicator__spinner" data-js-indicator width="24" height="24" viewBox="0 0 24 24" stroke="currentcolor" fill="none" aria-hidden="true">
+      <circle class="dads-progress-indicator__track" cx="12" cy="12" r="8" stroke-width="3"></circle>
+      <g><g><circle class="dads-progress-indicator__bar" cx="12" cy="12" r="8" stroke-width="3" pathLength="100"></circle></g></g>
+      <circle class="dads-progress-indicator__border" cx="12" cy="12" r="9.5" stroke-width="1"></circle>
+    </svg>
+    <span class="dads-progress-indicator__label" data-js-label>ラベル <span class="dads-progress-indicator__percentage" data-js-percentage></span></span>
+  </dads-progress-indicator>
 
 </div>
 
